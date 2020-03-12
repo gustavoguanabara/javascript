@@ -29,19 +29,6 @@ de obter ganho financeiro com ele. -->
         <p>O resultado vai aparecer aqui...</p>
     </section>
 
-    <script>
-        function teste() {
-            let num = Number(window.prompt('Digite um número: '))
-            let tipo
-            if (num % 2 == 0) {
-                tipo = '<strong>PAR</strong>'
-            } else {
-                tipo = '<strong>ÍMPAR</strong>'
-            }
-
-            let res = document.querySelector('section#result')
-            res.innerHTML = `<p>O número ${num} que foi digitado é ${tipo}!</p>`
-        }
-    </script>
+    <script src="parimpar.js"></script>
 </body>
 </html>

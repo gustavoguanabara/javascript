@@ -24,22 +24,11 @@ de obter ganho financeiro com ele. -->
 </head>
 <body>
     <h1>Calculando a idade</h1>
-    <button onclick="calcular()">Iniciar</button>
+    <button onclick="calcidade()">Iniciar</button>
     <section id="saida">
         <p>Aqui vai aparecer algo...</p>
     </section>
 
-    <script>
-        function calcular() {
-            let agora = new Date
-            let ano = agora.getFullYear()
-
-            let nasc = Number(window.prompt('Em que ano você nasceu?'))
-            let idade = ano - nasc
-
-            let saida = document.getElementById('saida')
-            saida.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> anos em ${ano}.</p>`
-        }
-    </script>
+    <script src="idade.js"></script>
 </body>
 </html>
