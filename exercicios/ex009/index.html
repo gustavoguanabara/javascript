@@ -16,20 +16,20 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript externo</title>
+    <title>Contador de Cliques</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; padding: 30px; }
     </style>
 </head>
 <body>
-    <h1>JavaScript Externo</h1>
-    <button onclick="acao1()">Ação 1</button>
-    <button onclick="acao2()">Ação 2</button>
-    <button onclick="acao3()">Ação 3</button>
-    <button onclick="acao4()">Ação 4</button>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()">Clique em mim</button>
+    <button onclick="zerar()">Zerar o contador</button>
+    <section id="result">
+        <p>O contador está com <mark>0</mark> cliques.</p>
+    </section>
 
-    <!-- No lugar de ter muitas linhas escritas dentro do seu documento HTML, use um arquivo externo que vai fazer a carga das suas funções JS no final da página. Isso separa o que é conteúdo (HTML) do que é funcionalidade (JS) -->
-    <script src="acoes.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -16,19 +16,20 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Números com JS</title>
+    <title>JavaScript externo</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; padding: 30px; }
     </style>
 </head>
 <body>
-    <h1>Média do aluno v2.0</h1>
-    <button onclick="media()">Calcular média</button>
-    <section id="situacao">
-        <p>O resultado vai aparecer aqui...</p>
-    </section>
+    <h1>JavaScript Externo</h1>
+    <button onclick="acao1()">Ação 1</button>
+    <button onclick="acao2()">Ação 2</button>
+    <button onclick="acao3()">Ação 3</button>
+    <button onclick="acao4()">Ação 4</button>
 
-    <script src="media.js"></script>
+    <!-- No lugar de ter muitas linhas escritas dentro do seu documento HTML, use um arquivo externo que vai fazer a carga das suas funções JS no final da página. Isso separa o que é conteúdo (HTML) do que é funcionalidade (JS) -->
+    <script src="acoes.js"></script>
 </body>
 </html>
