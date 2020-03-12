@@ -16,33 +16,31 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maior valor</title>
+    <title>O número é par ou ímpar?</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; padding: 30px; }
     </style>
 </head>
 <body>
-    <h1>Maior valor</h1>
-    <button onclick="maior()">Clique para começar</button>
-    <section id="saida">
+    <h1>É par ou é ímpar?</h1>
+    <button onclick="teste()">Clique para iniciar</button>
+    <section id="result">
         <p>O resultado vai aparecer aqui...</p>
     </section>
 
     <script>
-        function maior() {
-            let n1 = Number(window.prompt('Digite um número: '))
-            let n2 = Number(window.prompt('Digite outro número: '))
-            
-            let res = document.querySelector('section#saida')
-            if (n1 > n2) {
-                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n1}</strong></p>`
-            } else if (n1 < n2) {
-                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n2}</strong></p>`
+        function teste() {
+            let num = Number(window.prompt('Digite um número: '))
+            let tipo
+            if (num % 2 == 0) {
+                tipo = '<strong>PAR</strong>'
             } else {
-                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ambos são <strong>IGUAIS</strong></p>`
+                tipo = '<strong>ÍMPAR</strong>'
             }
-            
+
+            let res = document.querySelector('section#result')
+            res.innerHTML = `<p>O número ${num} que foi digitado é ${tipo}!</p>`
         }
     </script>
 </body>

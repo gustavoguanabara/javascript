@@ -16,33 +16,33 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Cliques</title>
+    <title>Maior valor</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; padding: 30px; }
     </style>
 </head>
 <body>
-    <h1>Contador de cliques</h1>
-    <button onclick="contar()">Clique em mim</button>
-    <button onclick="zerar()">Zerar o contador</button>
-    <section id="result">
-        <p>O contador está com <mark>0</mark> cliques.</p>
+    <h1>Maior valor</h1>
+    <button onclick="maior()">Clique para começar</button>
+    <section id="saida">
+        <p>O resultado vai aparecer aqui...</p>
     </section>
 
     <script>
-        let contador = 0 
-        let res = document.querySelector('section#result')
-        // As variáveis declaradas aqui fora são consideradas GLOBAIS e funcionam dentro do programa inteiro
-
-        function contar() {
-            contador ++ // É a mesma coisa que contador = contador + 1
-            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>`
-        }
-        
-        function zerar() {
-            contador = 0
-            res.innerHTML = null
+        function maior() {
+            let n1 = Number(window.prompt('Digite um número: '))
+            let n2 = Number(window.prompt('Digite outro número: '))
+            
+            let res = document.querySelector('section#saida')
+            if (n1 > n2) {
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n1}</strong></p>`
+            } else if (n1 < n2) {
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n2}</strong></p>`
+            } else {
+                res.innerHTML = `<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ambos são <strong>IGUAIS</strong></p>`
+            }
+            
         }
     </script>
 </body>
