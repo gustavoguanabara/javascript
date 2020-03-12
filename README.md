@@ -4,4 +4,4 @@ Material público para a disciplina de LTPW1, que ensina JavaScript na *Escola T
 
 * [Acesse os PDFs das aulas clicando aqui](https://github.com/gustavoguanabara/javascript/tree/master/aulas-pdf)
 * [Código disponível para os exercícios](https://github.com/gustavoguanabara/javascript/tree/master/exercicios)
-* [Execute os exercícios aqui](https://gustavoguanabara.github.io/javascript/exercicios/)
+* [Execute os exercícios aqui](https://gustavoguanabara.github.io/javascript/exercicios/index.html)
