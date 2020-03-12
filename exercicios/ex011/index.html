@@ -16,35 +16,33 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de números</title>
+    <title>Contador de Cliques</title>
     <style>
         body { font: 12pt Arial; }
-        button { font-size: 12pt; }
+        button { font-size: 12pt; padding: 30px; }
     </style>
 </head>
 <body>
-    <h1>Gerador de números</h1>
-    <button onclick="gerar()">Clique em mim</button>
-    <button onclick="limpar()">Limpar</button>
+    <h1>Contador de cliques</h1>
+    <button onclick="contar()">Clique em mim</button>
+    <button onclick="zerar()">Zerar o contador</button>
     <section id="result">
-        <p>Cada vez que você apertar o botão acima, eu penso em um número entre 1 e 100.</p>
+        <p>O contador está com <mark>0</mark> cliques.</p>
     </section>
 
     <script>
-        function gerar() {
-            let min = 1
-            let max = 100
-            let dif = max - min
-            let aleatorio = Math.random() // Essa função gera um valor Real aleatório entre 0 e 1
-            let num = min + Math.trunc(dif * aleatorio)
-            
-            let res = document.querySelector('section#result')
-            res.innerHTML += `<p>Acabei de pensar no número <mark>${num}</mark>!</p>`
-        }
+        let contador = 0 
+        let res = document.querySelector('section#result')
+        // As variáveis declaradas aqui fora são consideradas GLOBAIS e funcionam dentro do programa inteiro
 
-        function limpar() { // Essa é a funcionalidade do outro botão, pra limpar tudo
-            let res = document.querySelector('section#result')
-            res.innerHTML = null // Vai esvaziar a section toda
+        function contar() {
+            contador ++ // É a mesma coisa que contador = contador + 1
+            res.innerHTML = `<p>O contador está com <mark>${contador}</mark> cliques.</p>`
+        }
+        
+        function zerar() {
+            contador = 0
+            res.innerHTML = null
         }
     </script>
 </body>

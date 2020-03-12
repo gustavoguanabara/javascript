@@ -16,45 +16,36 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo em JS</title>
+    <title>Gerador de números</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; }
     </style>
 </head>
-<body onload="sortear()">
-    <h1>Tente adivinhar meu número</h1>
-    <button onclick="jogar()" id="botao">Tentar adivinhar</button>
+<body>
+    <h1>Gerador de números</h1>
+    <button onclick="gerar()">Clique em mim</button>
+    <button onclick="limpar()">Limpar</button>
     <section id="result">
-        <p>Já pensei em um valor entre 1 e 100...</p>
+        <p>Cada vez que você apertar o botão acima, eu penso em um número entre 1 e 100.</p>
     </section>
 
     <script>
-        // Todas as variáveis declaradas aqui em cima - fora das funções - são consideradas GLOBAIS e funcionam dentro de qualquer outra função!
-        let res = document.querySelector('section#result')
-        let computador = 0
-        let jogador = 0
-
-        function sortear() {
-            let min = 1 // As variáveis declaradas aqui dentro são LOCAIS, e só funcionam dentro da função onde foram declaradas
+        function gerar() {
+            let min = 1
             let max = 100
             let dif = max - min
-            let aleatorio = Math.random()
-            computador = min + Math.trunc(dif * aleatorio)
+            let aleatorio = Math.random() // Essa função gera um valor Real aleatório entre 0 e 1
+            let num = min + Math.trunc(dif * aleatorio)
+            
+            let res = document.querySelector('section#result')
+            res.innerHTML += `<p>Acabei de pensar no número <mark>${num}</mark>!</p>`
         }
 
-        function jogar() {
-            jogador = Number(window.prompt('Qual é o seu palpite?'))
-            if (jogador < computador) {
-                res.innerHTML += `<p>Você falou ${jogador}. Meu número é <strong>MAIOR</strong>!</p>`
-            } else if (jogador > computador) {
-                res.innerHTML += `<p>Você falou ${jogador}. Meu número é <strong>MENOR</strong>!</p>`
-            } else if (jogador == computador) {
-                res.innerHTML += `<p><strong>PARABÉNS!</strong> Você acertou! Eu tinha sorteado o valor ${computador}!</p>`
-                document.getElementById('botao').style.visibility = 'hidden'
-            }
+        function limpar() { // Essa é a funcionalidade do outro botão, pra limpar tudo
+            let res = document.querySelector('section#result')
+            res.innerHTML = null // Vai esvaziar a section toda
         }
-
     </script>
 </body>
 </html>
