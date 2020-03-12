@@ -16,18 +16,19 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação JS</title>
+    <title>Dados com JS</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; }
     </style>
 </head>
 <body>
-    <h1>Interagindo com um botão</h1>
-    <button onclick="clicou()">Clica em mim!</button>
+    <h1>Trabalhando com dados v1.0</h1>
+    <button onclick="inicio()">Clique para começar</button>
     <script>
-        function clicou() {
-            window.alert('Você clicou no botão!')
+        function inicio() {
+            let nome = window.prompt('Qual é o seu nome? ')
+            window.alert(`Olá, ${nome}! É um prazer te conhecer!`)
         }
     </script>
 </body>

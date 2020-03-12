@@ -16,18 +16,25 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interação JS</title>
+    <title>Dados com JS</title>
     <style>
         body { font: 12pt Arial; }
         button { font-size: 12pt; }
     </style>
 </head>
 <body>
-    <h1>Interagindo com um botão</h1>
-    <button onclick="clicou()">Clica em mim!</button>
+    <h1>Trabalhando com Dados v2.0</h1>
+    <button onclick="inicio()">Clique para começar</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado... </p>
+    </section>
     <script>
-        function clicou() {
-            window.alert('Você clicou no botão!')
+        function inicio() {
+            let nome = window.prompt('Qual é o seu nome?')
+            let res = window.document.getElementById('resultado')
+            // Também funciona com o comando abaixo
+            // let res = window.document.querySelector('section#resultado')
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
         }
     </script>
 </body>
