@@ -12,17 +12,19 @@ ou editoras para criar livros ou apostilas, com finalidades
 de obter ganho financeiro com ele. -->
 
 <!DOCTYPE html>
-<!-- Script que executa sozinho, sem a intervenção do usuário -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro JavaScript</title>
+    <title>JavaScript</title>
 </head>
 <body>
-    <h1>Primeiro JavaScript</h1>
+    <h1>Interagindo com um botão</h1>
+    <button onclick="clicou()">Clica em mim!</button>
     <script>
-        window.alert('Olá, Mundo!')
+        function clicou() {
+            window.alert('Você clicou no botão!')
+        }
     </script>
 </body>
 </html>
