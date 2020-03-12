@@ -1,0 +1,48 @@
+<!-- ## IMPORTANTE ##
+Você tem todo o direito de usar esse material para seu 
+próprio aprendizado. Professores também podem ter acesso 
+a todo o conteúdo e usá-los com seus alunos. Porém todos 
+o que usarem esse material - seja para qual for a finali-
+dade - deverão manter a referência ao material original, 
+criado pelo Prof. Gustavo Guanabara e disponível no seu 
+repositório público https://github.com/gustavoguanabara/. 
+Este material não poderá ser utilizado em nenhuma hipótese 
+para ser replicada - integral ou parcialmente - por autores 
+ou editoras para criar livros ou apostilas, com finalidades 
+de obter ganho financeiro com ele. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="result">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+    <script>
+        function calcular() {
+            let num = Number(window.prompt('Digite um número: '))
+            
+            let res = document.querySelector('section#result')
+            res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`
+            res.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>`
+            res.innerHTML += `<p>A sua parte inteira é ${Math.trunc(num)}</p>`
+            res.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(num)}</p>`
+            res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>` 
+            res.innerHTML += `<p>A sua raiz cúbica é ${Math.cbrt(num)}</p>`        
+            res.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}</p>`
+            res.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}</p>`
+        }
+    </script>
+</body>
+</html>
