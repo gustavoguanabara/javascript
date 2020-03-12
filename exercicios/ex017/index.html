@@ -1,0 +1,60 @@
+<!-- ## IMPORTANTE ##
+Você tem todo o direito de usar esse material para seu 
+próprio aprendizado. Professores também podem ter acesso 
+a todo o conteúdo e usá-los com seus alunos. Porém todos 
+o que usarem esse material - seja para qual for a finali-
+dade - deverão manter a referência ao material original, 
+criado pelo Prof. Gustavo Guanabara e disponível no seu 
+repositório público https://github.com/gustavoguanabara/. 
+Este material não poderá ser utilizado em nenhuma hipótese 
+para ser replicada - integral ou parcialmente - por autores 
+ou editoras para criar livros ou apostilas, com finalidades 
+de obter ganho financeiro com ele. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo em JS</title>
+    <style>
+        body { font: 12pt Arial; }
+        button { font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body onload="sortear()">
+    <h1>Tente adivinhar meu número</h1>
+    <button onclick="jogar()" id="botao">Tentar adivinhar</button>
+    <section id="result">
+        <p>Já pensei em um valor entre 1 e 100...</p>
+    </section>
+
+    <script>
+        // Todas as variáveis declaradas aqui em cima - fora das funções - são consideradas GLOBAIS e funcionam dentro de qualquer outra função!
+        let res = document.querySelector('section#result')
+        let computador = 0
+        let jogador = 0
+
+        function sortear() {
+            let min = 1 // As variáveis declaradas aqui dentro são LOCAIS, e só funcionam dentro da função onde foram declaradas
+            let max = 100
+            let dif = max - min
+            let aleatorio = Math.random()
+            computador = min + Math.trunc(dif * aleatorio)
+        }
+
+        function jogar() {
+            jogador = Number(window.prompt('Qual é o seu palpite?'))
+            if (jogador < computador) {
+                res.innerHTML += `<p>Você falou ${jogador}. Meu número é <strong>MAIOR</strong>!</p>`
+            } else if (jogador > computador) {
+                res.innerHTML += `<p>Você falou ${jogador}. Meu número é <strong>MENOR</strong>!</p>`
+            } else if (jogador == computador) {
+                res.innerHTML += `<p><strong>PARABÉNS!</strong> Você acertou! Eu tinha sorteado o valor ${computador}!</p>`
+                document.getElementById('botao').style.visibility = 'hidden'
+            }
+        }
+
+    </script>
+</body>
+</html>
