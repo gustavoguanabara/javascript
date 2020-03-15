@@ -1,4 +1,5 @@
 <img src="imagens/mascote.png" align="right" width="300">
+
 # Curso de JavaScript
 
 Material público para a disciplina de LTPW1, que ensina JavaScript na *Escola Técnica Oscar Tenório*, unidade da FAETEC do Rio de Janeiro.
