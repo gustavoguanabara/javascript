@@ -16,18 +16,19 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Fatorial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Super Tabuada</h1>
-    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele.</p>
+    <h1>Cálculo de Fatorial</h1>
+    <p>Escreva um número (entre 1 e 21) na caixa a seguir e te mostrarei o Fatorial dele.</p>
     <section id="entrada">
         <form action="#" method="get">
             <p>
                 <label for="fnum">Número: </label>
-                <input type="number" name="num" id="fnum" placeholder="Número: ">
-                <input type="submit" value="Tabuada" formaction="javascript:tabuada()">
+                <input type="number" name="num" id="fnum" max="21" min="1" placeholder="Número: ">
+                <!-- Vamos limitar os números entre 1 e 21, pois não existe fatorial de número negativo (0! = 1) e o fatorial de 22 já é um número muito grande para ser representado de forma simples na tela -->
+                <input type="submit" value="Fatorial" formaction="javascript:fatorial()">
             </p>
         </form>
     </section>
