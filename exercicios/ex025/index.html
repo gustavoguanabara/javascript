@@ -16,14 +16,22 @@ de obter ganho financeiro com ele. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contando de 10 a 1</title>
+    <title>Dados de Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contagem regressiva de 10 a 1</h1>
-    <button onclick="contar()" id="botao">Contar de 10 a 1</button>
+    <h1>Contando de 0 até um número positivo qualquer</h1>
+    <p>Escolha o limite final para a contagem a partir do 0 (digite apenas números postivos)</p>
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="fnum">Valor final: </label>
+            <input type="number" name="num" id="fnum" placeholder="Apenas positivos">
+            <input type="submit" value="Contar" formaction="javascript:contagem()">
+            <!-- Ao usar o FORMACTION, é preciso colocar javascript: antes do nome da função -->
+        </form>
+    </section>
     <section id="saida">
-        <p>Aperte o botão acima para contar</p>
+        <p>Preencha os dados acima e aperte o botão.</p>
     </section>
 
     <script src="script.js"></script>
