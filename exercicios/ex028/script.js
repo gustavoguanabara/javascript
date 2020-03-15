@@ -10,5 +10,6 @@ function fatorial() {
         fat *= c // Correspondente ao cálculo fat = fat * c
         c --
     }
-    saida.innerHTML += `1 = <strong>${fat}</strong>`
+    saida.innerHTML += `1 = <strong>${fat.toLocaleString('pt-BR')}</strong>`
+    // Usei o toLocaleString() na linha acima apenas para aparecerem os separadores de milhar/milhões/etc...
 }
