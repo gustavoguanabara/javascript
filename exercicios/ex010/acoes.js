@@ -15,6 +15,7 @@
 */
 
 let resp = window.document.getElementById('saida')
+// Lembre-se que toda variável declarada aqui fora possui escopo global. Veja mais sobre escopo no seu material em PDF, na aula 07.
 
 function acao1() {
     resp.innerHTML += '<p>Clicou no primeiro botão</p>'
