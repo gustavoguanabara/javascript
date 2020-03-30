@@ -14,18 +14,20 @@
     com ele.
 */
 
+let resp = window.document.getElementById('saida')
+
 function acao1() {
-    window.alert('Clicou no primeiro botão')
+    resp.innerHTML += '<p>Clicou no primeiro botão</p>'
 }
 
 function acao2() {
-    window.alert('Clicou no segundo botão')
+    resp.innerHTML += '<p>Clicou no segundo botão</p>'
 }
 
 function acao3() {
-    window.alert('Clicou no terceiro botão')
+    resp.innerHTML += '<p>Clicou no terceiro botão</p>'
 }
 
 function acao4() {
-    window.alert('Clicou no quarto botão')
+    resp.innerHTML += '<p>Clicou no quarto botão</p>'
 }
