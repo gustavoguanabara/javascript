@@ -20,28 +20,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Números com JS</title>
-    <style>
-        body { font: 12pt Arial; }
-        button { font-size: 12pt; padding: 30px; }
-    </style>
+    <link type="text/css" rel="stylesheet" href="src/style.css" />
 </head>
 <body>
     <h1>Somando dois números</h1>
-    <button onclick="somar()">Iniciar a soma</button>
+    <button id="button">Iniciar a soma</button>
     <section id="res">
         <p>O resultado vem aqui...</p>
     </section>
 
-    <script>
-    
-        function somar() {
-            let n1 = Number(window.prompt('Digite um número: '))
-            let n2 = Number(window.prompt('Digite outro número:'))
-            soma = n1 + n2
-
-            let res = document.querySelector('section#res')
-            res.innerHTML = `<p>A soma entre <mark>${n1}</mark> e <mark>${n2}</mark> é igual a <strong>${soma}</strong>!</p>`
-        }
-    </script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
