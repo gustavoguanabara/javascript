@@ -20,25 +20,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados com JS</title>
-    <style>
-        body { font: 12pt Arial; }
-        button { font-size: 12pt; padding: 30px; }
-    </style>
+    <link type="text/css" rel="stylesheet" href="src/style.css" />
 </head>
 <body>
+
     <h1>Trabalhando com Dados v2.0</h1>
-    <button onclick="inicio()">Clique para começar</button>
+    <button id="button">Clique para começar</button>
     <section id="resultado">
         <p>Aqui vai aparecer o resultado... </p>
     </section>
-    <script>
-        function inicio() {
-            let nome = window.prompt('Qual é o seu nome?')
-            let res = window.document.getElementById('resultado')
-            // Também funciona com o comando abaixo
-            // let res = window.document.querySelector('section#resultado')
-            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
-        }
-    </script>
+
+    <script src="src/js/main.js"></script>
 </body>
 </html>
