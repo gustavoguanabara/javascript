@@ -20,28 +20,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Números com JS</title>
-    <style>
-        body { font: 12pt Arial; }
-        button { font-size: 12pt; padding: 30px;  }
-    </style>
+    <link type="text/css" rel="stylesheet" href="src/style.css"/>
 </head>
 <body>
+    
     <h1>Trabalhando com números</h1>
-    <button onclick="calcular()">Clique para calcular</button>
+    <button id="button">Clique para calcular</button>
     <section id="res">
         <p>O resultado vem aqui...</p>
     </section>
 
-    <script>
-        // O que fica aqui fora vai executar automaticamente, SEMPRE que o site for carregado
-        window.alert('Seja bem-vindo(a) ao meu site!')
-        // Já a função calcular() só vai executar quando o usuário pressionar o botão
-        function calcular() {
-            let n1 = Number(window.prompt('Digite um número: '))
-            let res = document.querySelector('section#res')
-
-            res.innerHTML = `<p>O dobro de ${n1} é ${n1*2} e a metade é ${n1/2}!</p>`
-        }
-    </script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
