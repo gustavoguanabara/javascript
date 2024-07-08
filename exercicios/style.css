@@ -1,15 +1,16 @@
 body {
-    background-color: rgb(69, 69, 69);
-    font: 13pt Arial;
+    background-color: #454545;
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
 }
 
 main {
-    background-color: white;
+    background-color: #ffffff;
     width: 500px;
     padding: 20px;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
 }
 
 h1 {
@@ -17,32 +18,33 @@ h1 {
 }
 
 h2 {
-    color: rgb(125, 92, 8);
+    color: #7d5c08;
 }
 
 aside {
-    display: block; 
+    display: block;
     font-size: 10pt;
     text-align: justify;
-    background-color: rgb(222, 222, 222);
+    background-color: #dedede;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 aside img {
-    width: 60px; 
-    display: block; 
+    width: 60px;
+    display: block;
     float: left;
     margin-right: 10px;
 }
 
 a, a:visited {
-    color: rgb(34, 34, 34);
-    font-weight: bolder;
+    color: #222222;
+    font-weight: bold;
 }
 
 a:hover {
     color: darkgoldenrod;
     text-decoration: none;
 }
+    
