@@ -24,8 +24,16 @@
 </head>
 <body>
     <h1>Primeiro JavaScript</h1>
+    <button id="button1">increase</button>
+    <p id="input">0</p>
+    <button id="button3">reset</button>
+    <button id="button2">decrease</button>
     <script>
-        window.alert('Olá, Mundo!')
+       const incbtn = document.getElementById("button1"); const decbtn = document.getElementById("button2"); const resbtn = document.getElementById("button3");
+        const para = document.getElementById("input"); let count = 0; // num counter js
+        incbtn.addEventListener("click", () => { count++; para.innerHTML = count.toString(); })
+        decbtn.addEventListener("click", () => { count--; para.innerHTML = count.toString(); })
+        resbtn.addEventListener("click", () => { count = 0; para.innerHTML = count.toString(); })
     </script>
 </body>
 </html>
