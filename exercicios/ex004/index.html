@@ -22,18 +22,21 @@
     <title>Dados com JS</title>
     <style>
         body { font: 12pt Arial; }
-        button { font-size: 12pt; padding: 30px; }
-    </style>
+        button { font-size: 16pt; padding: 30px; }
+        body {background-color: aquamarine;}
+        button {background-color: blue;}
+        
+    </style>    
 </head>
 <body>
     <h1>Trabalhando com Dados v2.0</h1>
     <button onclick="inicio()">Clique para começar</button>
     <section id="resultado">
-        <p>Aqui vai aparecer o resultado... </p>
+      <p>Aqui vai aparecer o resultado...</p> 
     </section>
     <script>
         function inicio() {
-            let nome = window.prompt('Qual é o seu nome?')
+            let nome = prompt('Qual é o seu nome?')
             let res = window.document.getElementById('resultado')
             // Também funciona com o comando abaixo
             // let res = window.document.querySelector('section#resultado')
